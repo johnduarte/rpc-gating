@@ -1,4 +1,5 @@
-FROM ubuntu
+ARG BASE_IMAGE=ubuntu
+FROM ${BASE_IMAGE}
 RUN apt-get update && apt-get install -y groovy2 python-pip build-essential python-dev libssl-dev curl libffi-dev sudo git-core
 COPY requirements.txt /requirements.txt
 COPY test-requirements.txt /test-requirements.txt
