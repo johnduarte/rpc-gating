@@ -160,6 +160,8 @@
     action:
       - deploy:
           FLAVOR: "7"
+      - deploy-gh-testing:
+          FLAVOR: "7"
     # This is the build that will be triggered by the push trigger job
     trigger_build: 'PM_{repo_name}-{branch}-{image}-{scenario}-{action}'
     jobs:
